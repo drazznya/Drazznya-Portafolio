@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'mc-font';
+  src: url('font/Minecraft.ttf');
+}
+
+* {
+  font-family: mc-font;
+  background-color: black;
+}
+.container {
+  letter-spacing: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 95%;
+  margin: 4em auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  border: 1px solid black;
+  width: calc(33.33% - 10px);
+  height: 100px;
+  background-color: #C6C6C6;
+  margin: 5px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.box:hover {
+  cursor: pointer;
+  border: 1px solid white;
+  transform: scaleY(1.1);
+  background-color: #218306;
+}
+
+h2, h4 {
+  color: white;
+}
+img {
+  background-color: transparent;
+}
+.box img {
+  max-width: 100%;
+  height: auto;
+}
