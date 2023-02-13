@@ -1,47 +1,65 @@
-@font-face {
-  font-family: 'mc-font';
-  src: url('font/Minecraft.ttf');
+body {
+  background-image: url("ui/background.png");
+  font-family: "Minecraft", sans-serif;
 }
 
-* {
-  font-family: mc-font;
-  background-color: black;
-}
-.container {
-  letter-spacing: 1px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 95%;
-  margin: 4em auto;
-  justify-content: center;
-  align-items: center;
+@font-face {
+  font-family: "Minecraft";
+  src: url("font/minecraft.ttf") format("truetype");
 }
 
 .box {
-  border: 1px solid black;
-  width: calc(33.33% - 10px);
-  height: 100px;
-  background-color: #C6C6C6;
-  margin: 5px;
+  background-image: url("ui/button_gray.png");
+  width: 200px;
+  height: 50px;
+  display: inline-block;
   text-align: center;
-  line-height: 100px;
+  line-height: 50px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
 }
 
 .box:hover {
-  cursor: pointer;
-  border: 1px solid white;
-  transform: scaleY(1.1);
-  background-color: #218306;
+  background-image: url("ui/button_green.png");
+}
+
+.box:active {
+  background-image: url("ui/button_green.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.box:active::after {
+  content: url("sound/click.ogg");
 }
 
 h2, h4 {
-  color: white;
+  position: relative;
+  text-align: center;
 }
-img {
-  background-color: transparent;
+
+h2::before, h4::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #181414;
 }
-.box img {
-  max-width: 100%;
-  height: auto;
+
+h2::after, h4::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-image: url("ui/minecraft_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
