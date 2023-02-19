@@ -7,14 +7,30 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <h2>Drazznya's Portfolio</h2>
-    <h4>Click on any project</h4>
+    <h2 class="title">Drazznya's<br><span>Portfolio</span></h2>
+    <h4 class="subtitle">Click in any project</h4>
     <div class="container">
-      <div class="box" style="background-image: url('ui/button_gray.png')"><a href="https://mcpedl.com/newdoors-animated-doors/"></a>NewDoors</div>
-      <div class="box" style="background-image: url('ui/button_gray.png')"><a href="https://mcpedl.com/temperaturesbedrock-addon/"></a>TemperaturesBedrock</div>
-      <div class="box" style="background-image: url('ui/button_gray.png')"><a href="https://www.youtube.com/watch?v=kzBGTl2ZtiA&t=11s"></a>Better End</div>
-      <div class="box" style="background-image: url('ui/button_gray.png')"><a href="https://www.youtube.com/watch?v=fbW7pgAvg0A"></a>ReHarvest</div>
-      <div class="box" style="background-image: url('ui/button_gray.png')"><a href="https://mcpedl.com/anthagy-addon/"></a>Anthagy Addon</div>
+      <div class="box" onclick="window.open('https://mcpedl.com/newdoors-animated-doors/')">
+        <img class="button" src="ui/button_gray.png">
+        <span>NewDoors</span>
+      </div>
+      <div class="box" onclick="window.open('https://mcpedl.com/temperaturesbedrock-addon/')">
+        <img class="button" src="ui/button_gray.png">
+        <span>TemperaturesBedrock</span>
+      </div>
+      <div class="box" onclick="window.open('https://www.youtube.com/watch?v=kzBGTl2ZtiA&t=11s')">
+        <img class="button" src="ui/button_gray.png">
+        <span>Better End</span>
+      </div>
+      <div class="box" onclick="window.open('https://www.youtube.com/watch?v=fbW7pgAvg0A')">
+        <img class="button" src="ui/button_gray.png">
+        <span>ReHarvest</span>
+      </div>
+      <div class="box" onclick="window.open('https://mcpedl.com/anthagy-addon/')">
+        <img class="button" src="ui/button_gray.png">
+        <span>Anthagy Addon</span>
+      </div>
     </div>
+    <audio id="click" src="sound/click.ogg"></audio>
   </body>
 </html>
