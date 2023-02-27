@@ -1,168 +1,45 @@
-/* Fonts */
 @font-face {
-  font-family: 'minecraft';
+  font-family: 'mc-font';
   src: url('font/minecrafft.ttf');
 }
-
-/* Background Image */
-.background-image {
-  background-image: url('ui/background.png');
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+* {
+  font-family: mc-font;
+  background-color: black;
 }
-
-/* Main Title */
-h2 {
-  text-align: center;
-  font-family: 'minecraft', sans-serif;
-  font-size: 50px;
-  margin-top: 60px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px #000000;
-  color: #ffffff;
-}
-
-/* Secondary Title */
-h4 {
-  text-align: center;
-  font-family: 'minecraft', sans-serif;
-  font-size: 25px;
-  margin-bottom: 60px;
-  color: #ffffff;
-}
-
-/* Box Container */
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Buttons */
-.box {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  max-width: 95%;
+  margin: 5em auto;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  width: 280px;
-  height: 290px;
-  background-image: url("ui/button_gray.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: relative;
-  cursor: pointer;
+}
+
+.box {
+  border: 1px solid black;
+  width: calc(33.33% - 10px);
+  height: 100px;
+  background-color: #C6C6C6;
+  margin: 5px;
+  text-align: center;
+  line-height: 100px;
 }
 
 .box:hover {
-  background-image: url("ui/button_green.png");
+  cursor: pointer;
+  border: 1px solid white;
+  transform: scaleY(1.1);
+  background-color: #218306;
 }
 
-.box:active {
-  transform: translateY(2px);
-  box-shadow: none;
+h2, h4 {
+  color: white;
 }
-
-.btn-text {
-  color: #ffffff;
-  font-family: 'MinecraftRegular';
-  font-size: 24px;
-  text-align: center;
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  z-index: 1;
+img {
+  background-color: transparent;
 }
-
-.box:nth-child(1) {
-  background-image: url("ui/button_gray.png");
-}
-
-.box:nth-child(1):hover {
-  background-image: url("ui/button_green.png");
-}
-
-.box:nth-child(1) .btn-text {
-  font-size: 28px;
-  color: #ffffff;
-}
-
-.box:nth-child(2) {
-  background-image: url("ui/button_gray.png");
-}
-
-.box:nth-child(2):hover {
-  background-image: url("ui/button_green.png");
-}
-
-.box:nth-child(2) .btn-text {
-  font-size: 28px;
-  color: #ffffff;
-}
-
-.box:nth-child(3) {
-  background-image: url("ui/button_gray.png");
-}
-
-.box:nth-child(3):hover {
-  background-image: url("ui/button_green.png");
-}
-
-.box:nth-child(3) .btn-text {
-  font-size: 28px;
-  color: #ffffff;
-}
-
-.box:nth-child(4) {
-  background-image: url("ui/button_gray.png");
-}
-
-.box:nth-child(4):hover {
-  background-image: url("ui/button_green.png");
-}
-
-.box:nth-child(4) .btn-text {
-  font-size: 28px;
-  color: #ffffff;
-}
-
-.box:nth-child(5) {
-  background-image: url("ui/button_gray.png");
-}
-
-.box:nth-child(5):hover {
-  background-image: url("ui/button_green.png");
-}
-
-.box:nth-child(5) .btn-text {
-  font-size: 28px;
-  color: #ffffff;
-}
-
-.box.selected {
-  background-image: url("ui/button_green.png");
-}
-
-.box.selected:hover {
-  background-image: url("ui/button_green.png");
-}
-
-.box.selected .btn-text {
-  color: #ffffff;
-}
-
-@media only screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .box {
-    margin-bottom: 20px;
-  }
+.box img {
+  max-width: 100%;
+  height: auto;
 }
