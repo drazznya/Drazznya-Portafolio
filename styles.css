@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'mc-font';
-  src: url('font/minecrafft.ttf');
+  src: url('font/minecraft.ttf');
 }
 * {
   font-family: mc-font;
