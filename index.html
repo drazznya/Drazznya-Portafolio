@@ -8,45 +8,29 @@
   </head>
   <body>
     <div class="container">
-      <div class="box" onclick="handleClick(this)">
-        <img src="ui/button_gray.png" alt="NewDoors" class="btn-img" />
+      <h2>Drazznya's Portfolio</h2>
+      <h4>Click in any project</h4>
+      <div class="box" onclick="window.open('https://mcpedl.com/newdoors-animated-doors/')">
+        <img class="btn-image" src="ui/button_gray.png" alt="NewDoors">
         <div class="btn-text">NewDoors</div>
       </div>
-      <div class="box" onclick="handleClick(this)">
-        <img src="ui/button_gray.png" alt="TemperaturesBedrock" class="btn-img" />
+      <div class="box" onclick="window.open('https://mcpedl.com/temperaturesbedrock-addon/')">
+        <img class="btn-image" src="ui/button_gray.png" alt="TemperaturesBedrock">
         <div class="btn-text">TemperaturesBedrock</div>
       </div>
-      <div class="box" onclick="handleClick(this)">
-        <img src="ui/button_gray.png" alt="Better End" class="btn-img" />
+      <div class="box" onclick="window.open('https://www.youtube.com/watch?v=kzBGTl2ZtiA&t=11s')">
+        <img class="btn-image" src="ui/button_gray.png" alt="Better End">
         <div class="btn-text">Better End</div>
       </div>
-      <div class="box" onclick="handleClick(this)">
-        <img src="ui/button_gray.png" alt="ReHarvest" class="btn-img" />
+      <div class="box" onclick="window.open('https://www.youtube.com/watch?v=fbW7pgAvg0A')">
+        <img class="btn-image" src="ui/button_gray.png" alt="ReHarvest">
         <div class="btn-text">ReHarvest</div>
       </div>
-      <div class="box" onclick="handleClick(this)">
-        <img src="ui/button_gray.png" alt="Anthagy Addon" class="btn-img" />
+      <div class="box" onclick="window.open('https://mcpedl.com/anthagy-addon/')">
+        <img class="btn-image" src="ui/button_gray.png" alt="Anthagy Addon">
         <div class="btn-text">Anthagy Addon</div>
       </div>
     </div>
-    <div class="title-container">
-      <div class="title-line"></div>
-      <div class="title-text">Drazznya's Portfolio</div>
-      <div class="title-line"></div>
-    </div>
-    <div class="subtitle-container">
-      <div class="subtitle-text">Click in any project</div>
-    </div>
-    <audio id="audio" src="sound/minecraft_click.ogg"></audio>
-    <script>
-      function handleClick(element) {
-        var img = element.querySelector(".btn-img");
-        var text = element.querySelector(".btn-text");
-        img.src = "ui/button_green.png";
-        text.style.color = "#fff";
-        document.getElementById("audio").play();
-        window.open("https://mcpedl.com/" + text.innerText.toLowerCase().replace(/\s+/g, "-") + "/");
-      }
-    </script>
+    <div class="background-image"></div>
   </body>
 </html>
