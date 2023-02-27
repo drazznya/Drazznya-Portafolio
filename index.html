@@ -7,33 +7,46 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <h2 class="title">Drazznya's Portfolio</h2>
-    <h4 class="subtitle">Click on any project</h4>
     <div class="container">
-      <div class="box">
-        <img class="btn-img" src="ui/button_gray.png" alt="button">
+      <div class="box" onclick="handleClick(this)">
+        <img src="ui/button_gray.png" alt="NewDoors" class="btn-img" />
         <div class="btn-text">NewDoors</div>
       </div>
-      <div class="box">
-        <img class="btn-img" src="ui/button_gray.png" alt="button">
+      <div class="box" onclick="handleClick(this)">
+        <img src="ui/button_gray.png" alt="TemperaturesBedrock" class="btn-img" />
         <div class="btn-text">TemperaturesBedrock</div>
       </div>
-      <div class="box">
-        <img class="btn-img" src="ui/button_gray.png" alt="button">
+      <div class="box" onclick="handleClick(this)">
+        <img src="ui/button_gray.png" alt="Better End" class="btn-img" />
         <div class="btn-text">Better End</div>
       </div>
-      <div class="box">
-        <img class="btn-img" src="ui/button_gray.png" alt="button">
+      <div class="box" onclick="handleClick(this)">
+        <img src="ui/button_gray.png" alt="ReHarvest" class="btn-img" />
         <div class="btn-text">ReHarvest</div>
       </div>
-      <div class="box">
-        <img class="btn-img" src="ui/button_gray.png" alt="button">
+      <div class="box" onclick="handleClick(this)">
+        <img src="ui/button_gray.png" alt="Anthagy Addon" class="btn-img" />
         <div class="btn-text">Anthagy Addon</div>
       </div>
     </div>
-    <div class="cover-line"></div>
-    <img class="logo" src="ui/minecraft_logo.png" alt="Minecraft Logo">
-    <audio id="click-sound" src="sound/click.ogg"></audio>
-    <script src="script.js"></script>
+    <div class="title-container">
+      <div class="title-line"></div>
+      <div class="title-text">Drazznya's Portfolio</div>
+      <div class="title-line"></div>
+    </div>
+    <div class="subtitle-container">
+      <div class="subtitle-text">Click in any project</div>
+    </div>
+    <audio id="audio" src="sound/minecraft_click.ogg"></audio>
+    <script>
+      function handleClick(element) {
+        var img = element.querySelector(".btn-img");
+        var text = element.querySelector(".btn-text");
+        img.src = "ui/button_green.png";
+        text.style.color = "#fff";
+        document.getElementById("audio").play();
+        window.open("https://mcpedl.com/" + text.innerText.toLowerCase().replace(/\s+/g, "-") + "/");
+      }
+    </script>
   </body>
 </html>
